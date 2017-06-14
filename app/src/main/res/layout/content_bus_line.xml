@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.chen.stbus.Activity.BusLineActivity"
+    tools:showIn="@layout/activity_bus_line">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tv_line_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/list_item_spacing_half"
+                android:paddingLeft="@dimen/list_item_spacing"
+                android:paddingRight="@dimen/list_item_spacing"
+                android:paddingTop="@dimen/list_item_spacing_half"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20dp"
+                tools:text="汕头"/>
+
+            <ImageButton
+                android:id="@+id/iv_updown_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:background="@android:color/darker_gray"
+                app:srcCompat="@android:drawable/stat_notify_sync"/>
+
+            <TextView
+                android:id="@+id/tv_line_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:paddingBottom="@dimen/list_item_spacing_half"
+                android:paddingLeft="@dimen/list_item_spacing"
+                android:paddingRight="@dimen/list_item_spacing"
+                android:paddingTop="@dimen/list_item_spacing_half"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20dp"
+                tools:text="汕头"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_line_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/list_item_spacing"
+                android:paddingRight="@dimen/list_item_spacing"
+                android:text="首末班车时间："
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                />
+
+            <TextView
+                android:id="@+id/tv_line_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/list_item_spacing"
+                android:paddingRight="@dimen/list_item_spacing"
+                android:paddingTop="@dimen/list_item_spacing_half"
+                android:text="票价："
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:text="d"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_bus_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

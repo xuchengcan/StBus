@@ -1,11 +1,6 @@
 package com.chen.stbus.Base;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BaseTransientBottomBar;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.support.v4.app.Fragment;
 import android.webkit.WebSettings;
 import android.widget.Toast;
 
@@ -20,24 +15,10 @@ import java.util.Map;
 import okhttp3.Call;
 
 /**
- * Created by chen on 2017/6/9.
+ * Created by chen on 2017/6/12.
  */
 
-public class BaseActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-
-
-    public void showTip(View view,String content){
-        if (TextUtil.isValidate(content)){
-            Snackbar.make(view,content, BaseTransientBottomBar.LENGTH_SHORT);
-        }
-    }
+public class BaseFragment extends Fragment {
 
     public void showToast(String content) {
 
@@ -53,9 +34,9 @@ public class BaseActivity extends AppCompatActivity {
         urlhead.put("Accept", "application/json");
         urlhead.put("Accept-Encoding","gzip,deflate");
         urlhead.put("Accept-Language", "zh-CN,en-US;q=0.8");
-        urlhead.put("User-Agent", WebSettings.getDefaultUserAgent(getBaseContext()) + " Html5Plus/1.0");
+        urlhead.put("User-Agent", WebSettings.getDefaultUserAgent(getContext()) + " Html5Plus/1.0");
         urlhead.put("X-Requested-With", "XMLHttpRequest");
-        urlhead.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        urlhead.put("Content-Type", "application/x-www-form-urlencoded,charset=UTF-8");
         urlhead.put("Origin", "file://");
         return urlhead;
     }
