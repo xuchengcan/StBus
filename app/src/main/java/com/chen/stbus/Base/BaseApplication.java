@@ -3,6 +3,7 @@ package com.chen.stbus.Base;
 import android.app.Application;
 import android.content.Context;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.socks.library.KLog;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.log.LoggerInterceptor;
@@ -36,6 +37,8 @@ public class BaseApplication extends Application {
                 //其他配置
                 .build();
         OkHttpUtils.initClient(okHttpClient);
+
+        SDKInitializer.initialize(getApplicationContext());
     }
 
     public static Context getContext() {

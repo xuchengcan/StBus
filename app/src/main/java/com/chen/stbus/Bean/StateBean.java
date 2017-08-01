@@ -1,12 +1,13 @@
 package com.chen.stbus.Bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by chen on 2017/6/13.
  */
 
-public class StateBean {
+public class StateBean implements Serializable {
     public List<String> BusList;
     public String Latitude;
     public String LineId;

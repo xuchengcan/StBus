@@ -51,12 +51,13 @@ public class BaseActivity extends AppCompatActivity {
     public Map<String, String> getUrlhead() {
         Map<String, String> urlhead = new HashMap<>();
         urlhead.put("Accept", "application/json");
-        urlhead.put("Accept-Encoding","gzip,deflate");
+//        urlhead.put("Accept-Encoding","gzip,deflate");
         urlhead.put("Accept-Language", "zh-CN,en-US;q=0.8");
         urlhead.put("User-Agent", WebSettings.getDefaultUserAgent(getBaseContext()) + " Html5Plus/1.0");
         urlhead.put("X-Requested-With", "XMLHttpRequest");
-        urlhead.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        urlhead.put("Content-Type", "application/x-www-form-urlencoded,charset=UTF-8");
         urlhead.put("Origin", "file://");
+        urlhead.put("Connection", "keep-alive");
         return urlhead;
     }
 

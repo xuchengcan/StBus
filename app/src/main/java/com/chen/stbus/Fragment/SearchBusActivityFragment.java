@@ -197,7 +197,7 @@ public class SearchBusActivityFragment extends BaseFragment {
                 .headers(getUrlhead())
                 .url(UrlHelper.BaseUrl + UrlHelper.Lines + "?ticket=" + UrlHelper.Ticket)
                 .addParams("lineName", et_bus.getText().toString())
-//                        .addParams("ticket",UrlHelper.Ticket)
+                .addParams("ticket", UrlHelper.Ticket)
                 .build().execute(new StringCallback() {
             @Override
             public void onError(Call call, Exception e, int id) {

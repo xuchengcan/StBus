@@ -36,3 +36,9 @@
 #okio
 -dontwarn okio.**
 -keep class okio.**{*;}
+
+#百度地图
+-keep class com.baidu.** {*;}
+-keep class vi.com.** {*;}
+-dontwarn com.baidu.**
+
